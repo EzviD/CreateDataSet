@@ -17,7 +17,7 @@ def scale_img(path, folder, cnvs = r"\img\cnvs.jpg"):
 
             for k in range(left, right):
                 for l in range(upper, lower):
-                    dr.point((k, l), pix[j, i])
+                    dr.point((k, l), (pix[j, i], pix[j, i], pix[j, i]))
 
             j += 1
 

@@ -14,7 +14,7 @@ class Interface:
 
         self.folder = os.getcwd()
 
-        refactor_img(self.folder+img, (int(self.width/2), self.height))
+        refactor_img(self.folder+img, (int(self.width/2), self.height), to_gray=True)
         self.image = self.folder+img
 
         self.center = (0, 0)
@@ -122,7 +122,7 @@ class Interface:
                         if btns[i].collidepoint(mouse_pos):
                             for j in range(self.step):
                                 for k in range(self.step):
-                                    temp_x.append(pix[k, j][0])
+                                    temp_x.append(pix[k, j])
                             result_y.append(i-1)
                             result_x.append(temp_x)
 
